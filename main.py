@@ -29,6 +29,10 @@ def reply_to_client():
     output = json.dumps({'class': prediction, 'proba': probability})
     return output
 
+@app.route('/toto')
+def index():
+    return 'Bonjour'
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=8000, debug=True)
     
